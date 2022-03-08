@@ -15,6 +15,16 @@ onMounted(async () => {
   result.value = data;
 });
 
+const breeds = computed(() => {
+  if (result.value) {
+    return result.value.map((cat) => {
+      return { name: cat.name, id: cat.id };
+    });
+  } else {
+    return [];
+  }
+});
+
 const firstFour = computed(() => {
   const len = result.value ? result.value.length : 0;
 
@@ -23,7 +33,7 @@ const firstFour = computed(() => {
     const getRandomCat = () => {
       while (cats.length < 4) {
         const pickedCat = result.value[Math.floor(len * Math.random())];
-        if (!cats.includes(pickedCat) && pickedCat.name !== 'Persian') {
+        if (!cats.includes(pickedCat) && pickedCat.name !== "Persian") {
           cats.push(pickedCat);
         }
       }
@@ -38,7 +48,7 @@ const firstFour = computed(() => {
 </script>
 
 <template>
-  <HeaderSuperior />
+  <HeaderSuperior :breeds="breeds" />
   <HeaderInferior :firstFour="firstFour" />
   <YGallery />
   <FooterSimple />
