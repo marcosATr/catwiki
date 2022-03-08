@@ -10,13 +10,13 @@
       <div>
         <div class="grid grid-cols-10 grid-rows-10 gap-3">
           <div class="col-start-2 col-end-6 row-start-3 row-end-6">
-            <img src="img/image1.png" alt="gallery" class="object-cover w-full h-full rounded-3xl" />
+            <img src="/img/image1.png" alt="gallery" class="object-cover w-full h-full rounded-3xl" />
           </div>
           <div class="col-start-1 col-end-6 row-start-1 row-end-3">
-            <img src="img/image2.png" alt="gallery" class="object-cover w-full h-full rounded-3xl" />
+            <img src="/img/image2.png" alt="gallery" class="object-cover w-full h-full rounded-3xl" />
           </div>
           <div class="col-start-6 col-end-11 row-start-1 row-end-5">
-            <img src="img/image3.png" alt="gallery" class="object-cover w-full h-full rounded-3xl" />
+            <img src="/img/image3.png" alt="gallery" class="object-cover w-full h-full rounded-3xl" />
           </div>
         </div>
       </div>
