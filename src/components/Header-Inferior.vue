@@ -8,7 +8,7 @@
           <div><h1 class="font-semibold text-5xl md:max-w-[60%]">66+ varieties for you to discover</h1></div>
           <div class="py-4 md:py-0"><span class="font-bold text-[#74675c] uppercase">See More</span></div>
         </div>
-        <div class="flex flex-wrap justify-between pt-14 catList">
+        <div class="flex flex-wrap justify-center sm:justify-evenly pt-14 catList">
           <div v-for="cat in firstFour" :key="cat.id" class="max-w-[220px] relative z-10">
             <img :alt="cat.name" :src="cat.image.url" class="rounded-xl w-[220px] h-[220px] object-cover" />
             <div class="font-semibold text-lg py-4">{{ cat.name }}</div>
