@@ -19,7 +19,8 @@
   </div>
 </template>
 <script setup>
-import { computed, ref } from "vue";
+import { computed, onBeforeUnmount, ref } from "vue";
+import router from "../router";
 const box = ref(null);
 const isSearching = ref(false);
 const breedSearchString = ref("");
@@ -57,4 +58,9 @@ function handleClickOutside() {
     document.removeEventListener("mousedown", handleClickOutside);
   }
 }
+
+onBeforeUnmount(() => {
+  document.removeEventListener("mousedown", handleClickOutside);
+});
+
 </script>
