@@ -2,8 +2,8 @@
   <div class="md:container mx-auto">
     <div class="w-full h-full py-16">
       <div class="w-full flex flex-wrap" v-if="catData">
-        <div class="w-full md:w-[40%] px-8 pb-8 md:pl-0">
-          <img alt="" :src="catData.url" class="h-auto w-full rounded-lg object-cover shadow" />
+        <div class="w-full md:w-[40%] h-min px-8 pb-8 md:pl-0 md:aspect-square">
+          <img alt="" :src="catData.url" class="h-full w-full rounded-lg object-cover shadow" />
         </div>
         <div class="w-full md:w-[60%] px-8 md:pr-0">
           <h1 class="text-5xl font-semibold mb-8">{{ catData.breeds[0].name }}</h1>
