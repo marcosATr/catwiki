@@ -5,14 +5,23 @@
         <span class="font-semibold text-2xl">Other Photos</span>
       </div>
 
-      <div class="grid grid-cols-4 gap-6">
-        <div v-for="(photo, index) in catPhotos" :key="index" class="max-w-[278px] max-h-[278px]">
-          <img :alt="photo.breeds[0].name" :src="photo.url" class="w-full h-full object-cover rounded-xl"/>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div v-for="(photo, index) in catPhotos" :key="index" class="photoItem md:max-w-[278px] md:max-h-[278px]">
+          <img :alt="photo.breeds[0].name" :src="photo.url" class="w-full h-full object-cover rounded-xl" />
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped lang="scss">
+.photoItem {
+  @media (max-width: 768px) {
+    height: calc(100vw / 2 - 30px);
+    width: calc(100vw / 2 - 30px);
+  }
+}
+</style>
 
 <script setup>
 import { onMounted, ref } from "vue";
